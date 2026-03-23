@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num" placeholder="enter a number" type="text">
+    <button onclick="get_dashedNumber()">Convert</button>
+    <p id="converted"></p>
+    <script>
+        function get_dashedNumber(){
+        
+        let input_value = document.getElementById("num").value;
+
+        let len=input_value.length;
+        let a=[];
+        let r="";
+        for(let i=0;i<len;i++){
+            a.push(input_value[i]);
+        }
+        for(let i=0;i<len;i++){
+            r+=a[i]
+            if((parseInt(a[i])%2)===0 && (parseInt(a[i+1])%2)===0){
+                r+="_"
+            }
+            document.getElementById("converted").innerHTML=r;
+        }
+
+        }
+    </script>
+    
+</body>
+</html>

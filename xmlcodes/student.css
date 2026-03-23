@@ -1,0 +1,23 @@
+class { 
+font-family: Arial, sans-serif; 
+display: block; 
+margin: 20px; 
+} 
+student { 
+display: block; 
+border: 1px solid #444; 
+padding: 10px; 
+margin: 10px 0; 
+border-radius: 8px; 
+} 
+rollno, name, branch { 
+display: block; 
+margin: 4px 0; 
+}            
+name { 
+font-weight: bold; 
+font-size: 18px; 
+} 
+branch { 
+color: #444; 
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UpSkilling</title>
+
+<link rel="stylesheet" href="upskilll.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- NAVBAR + HOME -->
+<div class="home">
+    <div class="containerr">
+        <div class="top-section d-flex flex-row justify-content-center">
+            <h1 class="navicon">UpSkilling</h1>
+
+            <ul class="d-flex flex-row ml-5">
+                <li><a href="#" onclick="showHome()" class="listitem">HOME</a></li>
+                <li><a href="#" onclick="showcourses()" class="listitem">COURSES</a></li>
+                <li><a href="#" onclick="showLogin()" class="listitem">REGISTER</a></li>
+                <li><a href="#" onclick="showContact()" class="listitem">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="bottom-section d-flex flex-column justify-content-center align-items-center">
+            <h1 class="main-heading">Web Design &</h1>
+            <h1 class="main_head">Development Course</h1>
+
+            <p class="main-para">
+                Enhance your skills with industry-ready courses designed for real-world success.
+                Learn, build, and grow your career with expert guidance.
+            </p>
+
+            <button class="main-button">JOIN US</button>
+        </div>
+    </div>
+</div>
+
+<!-- COURSES -->
+<div id="courseSection" style="display:none;">
+    <h1 style="text-align:center;">Our Courses</h1>
+    <div id="coursesContainer" class="course-grid"></div>
+</div>
+
+<!-- LOGIN -->
+<div id="loginSection" style="display:none;" class="center-box">
+    <div class="login-section">
+        <h2>Register</h2>
+
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="confirm" placeholder="Confirm Password">
+
+        <button onclick="validateForm()">Submit</button>
+        <p id="error" style="color:red;"></p>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contactSection" style="display:none;" class="center-box">
+    <div class="contact-box">
+        <h2>Contact</h2>
+        <p>📍 Hyderabad</p>
+        <p>📧 info@upskill.com</p>
+        <p>📞 9876543210</p>
+
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+
+        <button>Submit</button>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="custom-footer">
+    <p>© 2026 UpSkilling | All Rights Reserved</p>
+</div>
+
+<!-- JS -->
+<script>
+
+function hideAll(){
+    document.querySelector(".home").style.display="none";
+    document.getElementById("courseSection").style.display="none";
+    document.getElementById("loginSection").style.display="none";
+    document.getElementById("contactSection").style.display="none";
+}
+
+function showHome(){
+    hideAll();
+    document.querySelector(".home").style.display="block";
+}
+
+function showcourses(){
+    hideAll();
+    document.getElementById("courseSection").style.display="block";
+    loadXML();
+}
+
+function showLogin(){
+    hideAll();
+    document.getElementById("loginSection").style.display="flex";
+}
+
+function showContact(){
+    hideAll();
+    document.getElementById("contactSection").style.display="flex";
+}
+
+// XML LOAD
+function loadXML(){
+    fetch("courses.xml")
+    .then(res => res.text())
+    .then(data => {
+        let parser = new DOMParser();
+        let xml = parser.parseFromString(data,"text/xml");
+        let courses = xml.getElementsByTagName("course");
+
+        let output="";
+        for(let i=0;i<courses.length;i++){
+            output += `
+            <div class="card">
+                <h3>${courses[i].getElementsByTagName("title")[0].textContent}</h3>
+                <p>${courses[i].getElementsByTagName("instructor")[0].textContent}</p>
+                <p>⭐ ${courses[i].getElementsByTagName("rating")[0].textContent}</p>
+                <p>₹ ${courses[i].getElementsByTagName("price")[0].textContent}</p>
+            </div>`;
+        }
+
+        document.getElementById("coursesContainer").innerHTML=output;
+    });
+}
+
+// FORM VALIDATION
+function validateForm(){
+    let pass = document.getElementById("password").value;
+    let confirm = document.getElementById("confirm").value;
+
+    if(pass !== confirm){
+        document.getElementById("error").innerText="Passwords do not match!";
+    } else {
+        document.getElementById("error").innerText="Registered Successfully!";
+    }
+}
+
+</script>
+
+</body>
+</html>

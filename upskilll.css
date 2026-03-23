@@ -1,0 +1,285 @@
+*{
+    margin:0;
+    padding:0;
+}
+.containerr {
+    width: 100vw;
+    background-size:cover;
+    background-image:url("tree.jpeg");
+    text-align:center;
+}
+li{
+    list-style-type:none;
+    padding:10px;
+    color:white;
+}
+.listitem{
+    color:white;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:12px;
+    font-family:Caveat;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+
+.top-section{
+    text-align:center;
+    padding:10px;
+}
+
+
+.navicon{
+    font-size:24px;
+    color:#ff7200;
+    padding:10px;
+    font-family:Caveat;
+}
+.search_button{
+    background-color:#ff7200;
+    color:white;
+    border:none;
+    border-radius:5px;
+    padding:5px 10px;
+    margin-left:0px;
+    font-size:14px;
+    font-family:Caveat;
+    width:100px;
+     height:30px;
+}
+.search_input{
+    padding:5px 10px;
+    border-radius:5px;
+    margin-top:8px;
+    border:solid 1px #ff7200;
+    height:30px;
+    color:white;
+    background: transparent;
+}
+.main-heading{
+    color:#ff7200;
+    font-size:40px;
+    font-family:Caveat;
+}
+.main_head{
+    color:white;
+    font-size:40px;
+    font-family:Caveat;
+}
+.main-button{
+     background-color:#ff7200;
+    color:white;
+    border:none;
+    border-radius:5px;
+    padding:5px 15px;
+    transition: background-color 1s;
+   
+    font-family:Caveat;
+    width:200px;
+     height:30px;
+}
+.main-para{
+    color:white;
+    font-size:14px;
+    
+}
+.login-section{
+    height:450px;
+    width:300px;
+    background-color:transparent;
+    text-align:center;
+    padding:10px;
+    border-radius:10px;
+    border:2px solid black;
+
+}
+.head-log{
+    color:#ff7200;
+    height:28px;
+    font-size:18px;
+    background-color: white;
+    border-radius:5px;
+      width:250px;
+      margin-left:15px;
+}
+
+.main-section{
+    width:500px;
+}
+.bottom-section{
+    height:90vh;
+}
+.iconn:hover{
+    color:#ff7200 !important;
+
+}
+.bottom-card{
+    border-radius:10px;
+    width:350px;
+    margin:20px;
+    padding-bottom:20px;
+    
+}
+.card-image{
+    width:350px;
+}
+.card-head{
+    font-size:20px;
+    font-weight:bold;
+}
+.premium-badge {
+            background:navy;
+            color: white;
+            border-radius: 12px;
+            padding: 8px 18px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-right:15px;
+            margin-left:15px;
+
+        }
+
+.bestseller-badge {
+            background-color: #cceeee;
+            color: #006666;
+            border-radius: 12px;
+            padding: 8px 18px;
+            font-weight: 600;
+            display: inline-block;
+        }
+.footer-section{
+    width:100vw;
+    height: 100vh;
+}
+
+.iconss{
+    height:60px;
+    width:60px;
+}
+.main-button:hover{
+    background-color: green;
+}
+/* FOOTER USING DIV */
+.custom-footer{
+    background:#111;
+    color:white;
+    padding:40px 20px;
+    margin-top:40px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.footer-box h3{
+    margin-bottom:10px;
+}
+
+.footer-box p{
+    font-size:14px;
+}
+
+.footer-box a{
+    color:white;
+    text-decoration:none;
+}
+
+.footer-box a:hover{
+    color:#ff7200;
+}
+
+.footer-logo{
+    color:#ff7200;
+}
+
+.footer-icons i{
+    font-size:20px;
+    margin-right:10px;
+    cursor:pointer;
+}
+
+.footer-icons i:hover{
+    color:#ff7200;
+}
+
+.footer-line{
+    height:1px;
+    background:gray;
+    margin:20px 0;
+}
+
+.footer-bottom{
+    text-align:center;
+    font-size:14px;
+    color:gray;
+}
+.registersection{
+    width:100vw;
+    height:100vh;
+    background-image: url("tree.jpeg");
+    background-size: cover;
+    margin:auto;
+}
+.contact-page{
+    width:100vw;
+    height:100vh;
+    background-image:url("login_background.jpg");
+    background-size:cover;
+}
+
+.contact-box{
+    background:#dcdcdc;
+    padding:30px;
+    border-radius:15px;
+    width:400px;
+}
+#courseDetailsSection{
+    min-height:100vh;
+    width:100vw;
+    padding:40px;
+    background:#f5f7fa;
+}
+/* XML COURSE DETAILS STYLE */
+#courseDetailsContainer{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* Improve card look */
+#courseDetailsSection .bottom-card{
+    width:300px;
+    background:white;
+    color:black;
+    border-radius:12px;
+    margin:15px;
+    padding:15px;
+    border-left:5px solid #ff7200;
+    transition:0.3s;
+}
+
+/* Hover effect */
+#courseDetailsSection .bottom-card:hover{
+    transform:translateY(-5px);
+}
+
+/* Heading */
+#courseDetailsSection h3{
+    color:#0a1f44;
+    font-size:18px;
+}
+
+/* Text */
+#courseDetailsSection p{
+    font-size:14px;
+}
+
+/* Labels */
+#courseDetailsSection b{
+    color:#ff7200;
+}

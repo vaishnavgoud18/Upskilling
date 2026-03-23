@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UpSkilling</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="assignment.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <script>
+function showLogin() {
+
+    // Hide home content
+    document.querySelector(".bottom-section").style.display = "none";
+
+    // Show login section
+    document.getElementById("loginSection").style.display = "block";
+
+    // Make it centered full page
+    document.getElementById("loginSection").style.margin = "auto";
+}
+</script>
+
+<!-- NAVBAR -->
+<header class="top-section d-flex justify-content-between align-items-center px-4">
+    <h1 class="navicon">UpSkilling</h1>
+
+    <nav>
+        <a href="#home" class="listitem">HOME</a>
+        <a href="#courses" class="listitem">COURSES</a>
+        <a href="#contact" class="listitem">CONTACT</a>
+        <a href="#login" class="listitem">LOGIN</a>
+    </nav>
+</header>
+
+<!-- HOME SECTION -->
+<section id="home" class="containerr d-flex align-items-center justify-content-center">
+    
+    <div class="main-section text-center">
+        <h1 class="main-heading">Web Design &</h1>
+        <h1 class="main_head">Development Course</h1>
+        <p class="main-para mt-3">
+            Learn modern web development with HTML, CSS and build real-world projects.
+        </p>
+        <button class="main-button mt-3">JOIN US</button>
+    </div>
+
+</section>
+
+<!-- COURSES SECTION -->
+<section id="courses" class="footer-section">
+    <h2 class="text-center mt-5">Top Courses</h2>
+
+    <div class="course-grid">
+
+        <!-- CARD 1 -->
+        <div class="bottom-card shadow">
+            <img src="Screenshot 2026-02-24 175227.png" class="card-image">
+            <p class="card-head">AI Automation Bootcamp</p>
+            <p>Krishna Tech</p>
+            <p>⭐ 4.5 (450)</p>
+            <p><b>₹479</b> <span class="strike">₹799</span></p>
+            <span class="premium-badge">Premium</span>
+            <span class="bestseller-badge">Bestseller</span>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="bottom-card shadow">
+            <img src="Screenshot 2026-02-24 175250.png" class="card-image">
+            <p class="card-head">AI Engineer Course</p>
+            <p>365 Careers</p>
+            <p>⭐ 4.6 (15k)</p>
+            <p><b>₹479</b> <span class="strike">₹3009</span></p>
+            <span class="premium-badge">Premium</span>
+            <span class="bestseller-badge">Bestseller</span>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="bottom-card shadow">
+            <img src="Screenshot 2026-02-24 175308.png" class="card-image">
+            <p class="card-head">Intro to AI Agents</p>
+            <p>Krishna Tech</p>
+            <p>⭐ 4.5 (30k)</p>
+            <p><b>₹479</b> <span class="strike">₹799</span></p>
+            <span class="premium-badge">Premium</span>
+            <span class="bestseller-badge">Bestseller</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- LOGIN SECTION -->
+<section id="login" class="login-wrapper d-flex justify-content-center align-items-center">
+    
+    <div class="login-section">
+        <h3 class="head-log">Login</h3>
+
+        <input type="email" placeholder="Email" class="search_input"><br>
+        <input type="password" placeholder="Password" class="search_input"><br>
+
+        <button class="main-button mt-3">Login</button>
+
+        <p class="mt-3 small-text">Don't have an account? <span class="signup">Sign Up</span></p>
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section text-center">
+    <h2>Contact Us</h2>
+
+    <p>📍 Hyderabad, India</p>
+    <p>📧 info@upskilling.com</p>
+    <p>📞 9876543210</p>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Name"><br>
+        <input type="email" placeholder="Email"><br>
+        <textarea placeholder="Message"></textarea><br>
+        <button class="main-button">Send</button>
+    </form>
+</section>
+
+</body>
+</html>

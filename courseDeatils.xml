@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        
+<courses>
+    <course>
+        <title>AI Bootcamp</title>
+        <description>Learn AI, automation and real-world projects.</description>
+        <instructor>Krishna Technologies</instructor>
+        <duration>6 Months</duration>
+        <curriculum>Python, Machine Learning, Deep Learning</curriculum>
+    </course>
+
+    <course>
+        <title>Web Development</title>
+        <description>Learn HTML, CSS, JS and build real websites.</description>
+        <instructor>Code Academy</instructor>
+        <duration>4 Months</duration>
+        <curriculum>HTML, CSS, JavaScript, Bootstrap</curriculum>
+    </course>
+</courses>

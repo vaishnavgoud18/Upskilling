@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title> 
+        </head> 
+        <body> <input id="inputelement" type="text" placeholder="enter array numbers" > <br>
+             <button onclick="findsum()">Sum of array</button>
+              <br> <button onclick="findlargest()">largest Element</button> <br>
+               <button onclick="findsmallest()">smallest Element</button>
+               <br> <button onclick="counteven()">Count of even</button>
+               <br> <button onclick="countodd()">Count of odd </button>
+               <br> 
+            <p id="wanted"></p>
+        
+<script>
+let para = document.getElementById("wanted");
+para.textContent = "";
+
+function getArray() {
+    let input = document.getElementById("inputelement").value;
+    return input.split(",").map(Number);
+}
+
+function findsum() {
+    let a = getArray();
+    let sum = 0;
+
+    for (let i = 0; i < a.length; i++) {
+        sum += a[i];
+    }
+
+    para.textContent = "Sum is: " + sum;
+}
+
+function findlargest() {
+    let a = getArray();
+    let largest = a[0];
+
+    for (let i = 1; i < a.length; i++) {
+        if (a[i] > largest) {
+            largest = a[i];
+        }
+    }
+
+    para.textContent = "Largest is: " + largest;
+}
+
+function findsmallest() {
+    let a = getArray();
+    let smallest = a[0];
+
+    for (let i = 1; i < a.length; i++) {
+        if (a[i] < smallest) {
+            smallest = a[i];
+        }
+    }
+
+    para.textContent = "Smallest is: " + smallest;
+}
+
+function counteven() {
+    let a = getArray();
+    let evencount = 0;
+
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] % 2 === 0) {
+            evencount++;
+        }
+    }
+
+    para.textContent = "Even count is: " + evencount;
+}
+
+function countodd() {
+    let a = getArray();
+    let oddcount = 0;
+
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] % 2 !== 0) {
+            oddcount++;
+        }
+    }
+
+    para.textContent = "Odd count is: " + oddcount;
+}
+</script>
+</body>
